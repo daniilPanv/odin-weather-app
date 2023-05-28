@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Weather Check</h1>
+        <div class="logo">
+            <img src="./icons/icons8-windsock-64.png" alt="windsock">
+        </div>
+    </header>
+    <div class="container">
+        <div class="search">
+            <input type="search" name="city" id="city" placeholder="Enter your city name">
+            <button class="search-btn">Search</button>
+        </div>
+        <div class="weather">
+            <div class="weather-city-and-temp">
+                <div class="city-name">Chiang Rai</div>
+                <div class="temp-real">+39°C</div>
+            </div>
+            <div class="weather-desc">
+                <div class="weather-text">Sunny</div>
+                <img class="weather-desc-icon" src="./icons/icons8-sun-64.png" alt="icon">
+            </div>
+            <div class="weather-feel">
+                <div class="weather-text">Feels like</div>
+                <div class="temp-feel">+42°C</div>
+            </div>
+            <div class="weather-humid">
+                <div class="weather-text">Humidity</div>
+                <div class="humidity">70%</div>
+            </div>
+            <div class="weather-wind">
+                <div class="weather-text">Wind</div>
+                <div class="wind">1 m/s</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
