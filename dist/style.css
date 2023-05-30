@@ -116,7 +116,7 @@ header {
     max-width: 100%;
     min-width: 50%;
     margin-top: 1.5em;
-    padding: 1.3em 2em;
+    padding: 1.3em 3em;
     border-radius: 10px;
     /* background-color: #60BF81; */
     background-color: var(--weather-card);
@@ -149,6 +149,6 @@ div[class^='row-'] {
 }
 
 .row-desc, .row-feel, .row-humid, .row-wind {
-    width: 70%;
+    width: 80%;
     margin: 0 auto;
 }
