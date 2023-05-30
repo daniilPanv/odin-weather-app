@@ -1,3 +1,3 @@
 # odin-weather-app
 
-<a target="_blank" href="https://icons8.com/icon/A0LHNc-UqBGM/windsock">Windsock</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+https://fonts.google.com/icons?selected=Material+Symbols+Outlined%3Asunny%3AFILL%400%3Bwght%40400%3BGRAD%400%3Bopsz%4048&icon.query=weather
