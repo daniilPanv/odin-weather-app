@@ -1,13 +1,4 @@
-/* create 2 color palettes for different weather: 
-sunny (yellow, green), rainy (blue, grey) */
-/* change icons colors as well */
 :root {
-/* default colors */
-    /* --header-n-text: #223240;
-    --text-in-header-btn: #93D94E;
-    --body-background: #3B8C66;
-    --search-border: 2px solid #347355;
-    --weather-card: #60BF81; */
 /* sunny colors */
     /* --header-n-text: #146152;
     --text-in-header-btn: #FFEC5C;
@@ -40,7 +31,6 @@ sunny (yellow, green), rainy (blue, grey) */
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
-    /* background-color: #3B8C66; */
     background-color: var(--body-background);
 
     display: flex;
@@ -52,9 +42,7 @@ img {
 }
 
 header {
-    /* background-color: #223240; */
     background-color: var(--header-n-text);
-    /* color: #93D94E; */
     color: var(--text-in-header-btn);
 }
 
@@ -88,7 +76,6 @@ header {
     padding: .3em;
     outline: none;
     appearance: none;
-    /* border: 2px solid #347355; */
     border: var(--search-border);
     border-radius: 6px;
 }
@@ -97,10 +84,8 @@ header {
     cursor: pointer;
     border: none;
     font-family: inherit;
-    /* color: #223240; */
     color: var(--header-n-text);
 
-    /* background-color: #93D94E; */
     background-color: var(--text-in-header-btn);
     font-size: 1rem;
     padding: .45em 1em;
@@ -118,9 +103,7 @@ header {
     margin-top: 1.5em;
     padding: 1.3em 3em;
     border-radius: 10px;
-    /* background-color: #60BF81; */
     background-color: var(--weather-card);
-    /* color: #223240; */
     color: var(--header-n-text);
     font-size: 1.5rem;
 
@@ -151,4 +134,16 @@ div[class^='row-'] {
 .row-desc, .row-feel, .row-humid, .row-wind {
     width: 80%;
     margin: 0 auto;
+}
+
+@media (max-width: 700px) {
+    .container {
+        width: 100%;
+    }
+    .weather {
+        width: 70%;
+    }
+    #city {
+        width: 80%;
+    }
 }
