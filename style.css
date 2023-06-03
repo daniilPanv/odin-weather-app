@@ -30,6 +30,7 @@
 
 body {
     margin: 0;
+    height: 100vh;
     font-family: 'Roboto', sans-serif;
     background-color: var(--body-background);
 
@@ -116,6 +117,7 @@ div[class^='row-'] {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 1em;
 }
 
 .city-name, .temp-real {
@@ -142,6 +144,36 @@ div[class^='row-'] {
     }
     .weather {
         width: 70%;
+    }
+    #city {
+        width: 80%;
+    }
+}
+
+@media (max-width: 594px) {
+    .container {
+        width: 100%;
+    }
+    .weather {
+        width: 95%;
+        padding: 1.3em 1.5em;
+    }
+    #city {
+        width: 80%;
+    }
+}
+
+@media (max-width: 360px) {
+    .container {
+        width: 100%;
+    }
+    .weather {
+        width: 95%;
+        padding: 1.3em 1.5em;
+        font-size: 1.2rem;
+    }
+    .city-name, .temp-real {
+        font-size: 1.5rem;
     }
     #city {
         width: 80%;
