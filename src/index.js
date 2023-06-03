@@ -1,7 +1,6 @@
-console.log('weathaaaaaa')
+/* eslint-disable no-use-before-define */
 // make an object with all the necessary information
 const getWeatherInfo = (prom) => {
-    console.log(prom)
     const location = prom.location.name;
     const tempC = `${prom.current.temp_c}°C`;
     const feelsTempC = `${prom.current.feelslike_c}°C`;
@@ -26,6 +25,10 @@ const displayWeather = (obj) => {
     const weatherHumidity = document.querySelector('.humidity');
     const weatherWind = document.querySelector('.wind');
 
+    const tempRealF = document.querySelector('.temp-real-f');
+    const tempFeelF = document.querySelector('.temp-feel-f');
+    const weatherWindMph = document.querySelector('.wind-mph');
+
     cityName.innerText = obj.location;
     tempReal.innerText = obj.tempC;
     weatherDesc.innerText = obj.weatherDescription;
@@ -33,6 +36,10 @@ const displayWeather = (obj) => {
     tempFeel.innerText = obj.feelsTempC;
     weatherHumidity.innerText = obj.humidity;
     weatherWind.innerText = obj.windKph;
+
+    tempRealF.innerText = obj.tempF;
+    tempFeelF.innerText = obj.feelsTempF;
+    weatherWindMph.innerText = obj.windMph;
 }
 // change color theme depending on weather
 const changeColorTheme = (obj) => {
@@ -50,6 +57,35 @@ const changeColorTheme = (obj) => {
         websiteTheme.style.setProperty('--search-border', '2px solid #566D8C');
         websiteTheme.style.setProperty('--weather-card', '#9CB6D9');
     }
+}
+// convert units
+const convertToImperial = () => {
+    const tempFeelC = document.querySelector('.temp-feel');
+    const tempFeelF = document.querySelector('.temp-feel-f');
+    const weatherWind = document.querySelector('.wind');
+    const weatherWindMph = document.querySelector('.wind-mph');
+
+    tempReal.style.display = 'none';
+    tempFeelC.style.display = 'none';
+    weatherWind.style.display = 'none';
+
+    tempRealF.style.display = 'flex';
+    tempFeelF.style.display = 'flex';
+    weatherWindMph.style.display = 'flex'
+}
+const convertToMetric = () => {
+    const tempFeelC = document.querySelector('.temp-feel');
+    const tempFeelF = document.querySelector('.temp-feel-f');
+    const weatherWind = document.querySelector('.wind');
+    const weatherWindMph = document.querySelector('.wind-mph');
+
+    tempRealF.style.display = 'none';
+    tempFeelF.style.display = 'none';
+    weatherWindMph.style.display = 'none';
+
+    tempReal.style.display = 'flex';
+    tempFeelC.style.display = 'flex';
+    weatherWind.style.display = 'flex';
 }
 // fetch the weather from WeatherAPI
 const getWeather = async (city) => {
@@ -77,3 +113,9 @@ window.addEventListener('keydown', (e) => {
         getWeather(searchValue);
     }
 })
+// convert units
+const tempReal = document.querySelector('.temp-real');
+const tempRealF = document.querySelector('.temp-real-f');
+
+tempReal.addEventListener('click', convertToImperial);
+tempRealF.addEventListener('click', convertToMetric);
