@@ -60,7 +60,7 @@ const getWeather = async (city) => {
         displayWeather(cityWeather);
         changeColorTheme(cityWeather);
     } catch (error) {
-        alert('Please, enter the city name!');
+        alert('Please, enter a city name!');
     }
 }
 
